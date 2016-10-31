@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <VasiliiB_CategoryBottomDescription>
+            <active>true</active>
+            <codePool>local</codePool>
+            <depends>
+                <Mage_Catalog />
+            </depends>
+        </VasiliiB_CategoryBottomDescription>
+    </modules>
+</config>
