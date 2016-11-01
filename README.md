@@ -36,7 +36,7 @@ Here you can insert the contact form or any other block/widget element.
 
 ### How to use
 1. Go to `Catalog -> Manage Categories`
-2. In the _General_ Tab of the category (new or selected one) find **_Bottom Description_** textarea field
+2. In the _General Information_ Tab of the category (new or selected one) find **_Bottom Description_** textarea field
 3. Fill in information you'd like to appear on Front-end
 4. Save Category
 5. Go to the view page of modified category
