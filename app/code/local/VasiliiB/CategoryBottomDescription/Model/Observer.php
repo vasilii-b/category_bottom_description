@@ -27,23 +27,23 @@
 *
 */
 
-$installer = $this;
-$installer->startSetup();
+class VasiliiB_CategoryBottomDescription_Model_Observer
+{
 
-$attribute  = array(
-    'type' => 'text',
-    'label'=> 'Bottom Description',
-    'input' => 'textarea',
-    'global' => Mage_Catalog_Model_Resource_Eav_Attribute::SCOPE_STORE,
-    'visible' => true,
-    'required' => false,
-    'user_defined' => true,
-    'wysiwyg_enabled' => true,
-    'visible_on_front' => true,
-    'is_html_allowed_on_front' => true,
-    'default' => "",
-    'group' => "General Information"
-);
+	/**
+	* Reindex Catalog Category Data
+	*/
+	public function reindexFlatCategory(Varien_Event_Observer $observer)
+	{
+		$reindexer = Mage::getModel('index/indexer')->getProcessByCode('catalog_category_flat');
 
-$installer->addAttribute('catalog_category', 'bottom_description', $attribute);
-$installer->endSetup();
+		if(
+			Mage::getStoreConfig('catalog/frontend/flat_catalog_category')
+			&&
+			$reindexer->getStatus() == Mage_Index_Model_Process::STATUS_REQUIRE_REINDEX
+		)
+		{
+		  $reindexer->reindexAll();
+		}
+	}
+}
