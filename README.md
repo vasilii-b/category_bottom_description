@@ -8,7 +8,7 @@ This information will be displayed right after category product list/grid.<br>
 Here you can insert the contact form or any other block/widget element.
 
 ### Features
-* Editable per storeview
+* Field (Bottom Description) Editable per storeview
 * **WYSIWYG** editor
 * Uploaded images via WYSIWYG are visible on Front-End
 * Works with **_Catalog Category Flat_** data enabled
@@ -28,6 +28,11 @@ Here you can insert the contact form or any other block/widget element.
   10. Clear cache
   
 + Using `git` cloned/dowloaded files<br>
+  - Clone this repo to your magento root folder
+  - **OR**
+  - Donwload as a `zip` file this repo
+  - Open the archive
+  - Drag & Drop folder `/app` from opened archive to the root folder of your magento installation
 
 ### How to use
 1. Go to `Catalog -> Manage Categories`
@@ -38,4 +43,4 @@ Here you can insert the contact form or any other block/widget element.
 
 ### Other
 Feedback is appreciated.<br>
-Let me know if I can improve here something.
+Let me know if I can improve something.
